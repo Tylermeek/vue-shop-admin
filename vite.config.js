@@ -17,11 +17,20 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
-  resolve:{
-    alias:{
-      '@':path.resolve(__dirname, 'src')
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
     }
 
+  },
+  server: {
+    proxy: {
+      // 选项写法
+      '/api': {
+        target: 'http://ceshi13.dishait.cn',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
+    }
   }
-
 })

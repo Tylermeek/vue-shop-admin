@@ -1,5 +1,5 @@
 <template>
-<span>home</span>
+<span>home {{$store.state.userInfo}}</span>
 </template>
 
 <script>
