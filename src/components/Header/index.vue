@@ -1,11 +1,11 @@
 <template>
-  <router-view></router-view>
+    <span>Header</span>
 </template>
 
 <script>
 export default {
   // 组件名称
-  name: ' ',
+  name: 'Asider',
 }
 </script> 
 

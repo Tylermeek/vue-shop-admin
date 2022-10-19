@@ -1,22 +1,14 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-</script>
-
 <template>
 <router-view></router-view>
 </template>
 
-<style scoped>
-.logo {
-  min-width: 100%;
-  height: 6em;
-  will-change: filter;
+<script>
+export default {
+  // 组件名称
+  name: 'App',
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+</script> 
+
+<style scoped lang='less'>
+
 </style>

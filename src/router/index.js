@@ -4,11 +4,20 @@ import Home from '@/views/HomePage.vue'
 import NotFound from '@/views/404Page/index.vue'
 import LoginPage from '@/views/loginPage/index.vue'
 import registerPage from '@/views/registerPage/index.vue'
+import dashBoard from '@/views/dashBoard/index.vue'
 
 const routes = [
     {
         path: '',
         component: Home,
+        redirect: '/dashBoard',
+        children:[
+            {
+                path: '/dashBoard',
+                name: 'dashBoard',
+                component: dashBoard
+            }
+        ]
     },
     {
         path:'/login',
