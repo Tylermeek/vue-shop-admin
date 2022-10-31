@@ -26,7 +26,7 @@ router.beforeEach(async (to, from, next) => {
     // 如果带有token，获取用户信息
     else if(token){
         // 因为该方法返回的是一个promise对象，所以需要使用await解析
-        await store.dispatch('getInfo', )
+        await store.dispatch('getInfo')
     }
     next()
 })

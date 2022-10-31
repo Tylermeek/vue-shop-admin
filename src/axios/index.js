@@ -15,7 +15,6 @@ service.interceptors.request.use(function (config) {
   const token = getCookie()
   if(token){
     config.headers['token'] = token
-    // config.headers["Set-Cookie"] = {HttpOnly,Secure,SameSite:None}
   }
   return config;
 }, function (error) {

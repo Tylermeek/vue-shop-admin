@@ -18,6 +18,8 @@
 </template>
 
 <script>
+import '@/utils/flexible.js'
+
 export default {
   // 组件名称
   name: "NotFound",
@@ -42,7 +44,7 @@ export default {
 
       position: absolute;
       bottom: 20%;
-      display: flex; 
+      display: flex;
       justify-content: center;
       width: 100%;
     }

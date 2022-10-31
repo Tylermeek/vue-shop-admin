@@ -110,6 +110,7 @@ import { login } from '@/axios/api/manager.js'
 import { useRouter } from 'vue-router'
 import { setCookie } from '@/utils/cookieManage.js'
 import { toast } from '@/utils/toast.js'
+import '@/utils/flexible.js'
 
 export default {
   // 组件名称

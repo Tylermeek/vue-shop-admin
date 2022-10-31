@@ -3,21 +3,27 @@ import { getInfo } from '@/axios/api/manager.js'
 
 // 创建一个新的 store 实例
 const store = createStore({
-  state () {
+  state() {
     return {
-      userInfo:{}
+      userInfo: {},
+      dataRanage: 'week',
     }
   },
   mutations: {
-    setUserInfo(state,userInfo){
-        state.userInfo = userInfo
-    }
+    setUserInfo(state, userInfo) {
+      state.userInfo = userInfo
+    },
+
+    changeRanage(state, newRanage) {
+      state.dataRanage = newRanage
+    },
+
   },
-  actions:{
+  actions: {
     // 获取当前登录用户信息
-    getInfo({ commit }){
-      return new Promise((resolve, reject)=>{
-        getInfo().then(res=>{
+    getInfo({ commit }) {
+      return new Promise((resolve, reject) => {
+        getInfo().then(res => {
           commit('setUserInfo', res)
           resolve(res)
         }).catch(err => reject(err))
